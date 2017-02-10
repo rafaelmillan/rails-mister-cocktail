@@ -9,7 +9,7 @@ Faker::UniqueGenerator.clear
 end
 
 10.times do
-  cocktail = Cocktail.new(name: Faker::Space.unique.galaxy)
+  cocktail = Cocktail.new(name: Faker::Space.unique.galaxy, votes: (1..100).to_a.sample)
   3.times do
     ingredient = Ingredient.all.sample.name
     until cocktail.ingredients.find_by(name: ingredient).nil?

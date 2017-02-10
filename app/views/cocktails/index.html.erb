@@ -2,7 +2,14 @@
 <div id="recipes-wrapper">
   <% @cocktails.each do |cocktail| %>
     <%= link_to cocktail_path(cocktail) do %>
-    <div class="recipe text-center" style="background-image: url('<%= cl_image_path cocktail.photo.url, height: 300, width: 400, crop: :fill %>')"><%= cocktail.name %></div>
+      <div class="recipe-wrapper">
+        <div class="recipe" style="background-image: url('<%= cl_image_path cocktail.photo.url, height: 300, width: 400, crop: :fill %>')">
+          <%= cocktail.name %>
+        </div>
+          <%= link_to upvote_cocktail_path(cocktail), method: :patch, class: "votes" do %>
+            <%= cocktail.votes %> <i class="fa fa-thumbs-up"></i>
+          <% end %>
+      </div>
     <% end %>
   <% end %>
 </div>
