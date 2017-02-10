@@ -1,7 +1,9 @@
-<h1>Cocktails</h1>
-<ul>
+<h1>Galaxy Cocktails</h1>
+<div id="recipes-wrapper">
   <% @cocktails.each do |cocktail| %>
-    <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
+    <div class="recipe text-center"><%= link_to cocktail.name, cocktail_path(cocktail) %></div>
   <% end %>
-</ul>
-<%= link_to "New cocktail", new_cocktail_path %>
+</div>
+<%= link_to new_cocktail_path, class: "btn btn-primary space-button pull-right" do %>
+  New cocktail <i class="fa fa-glass"></i>
+<% end %>

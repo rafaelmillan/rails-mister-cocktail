@@ -13,3 +13,86 @@
 @import "components/index";
 @import "pages/index";
 @import "vendor/index";
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400|Permanent+Marker');
+
+body {
+  margin-top: 30px;
+  background-color: black;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  margin-bottom: 50px;
+  font-weight: 300;
+}
+
+h1 {
+  font-family: 'Permanent Marker', cursive;
+}
+
+h2, h3, h4 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 1.5em;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+#recipes-wrapper {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.recipe {
+  border: blue dashed;
+  border-width: 0px 0px 1px 0px;
+  padding: 20px 0;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 5px;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: blue;
+  }
+}
+
+.recipe a {
+  color: white;
+}
+
+.form-control {
+  background-color: black;
+  color: white;
+}
+
+.form-control:focus {
+  border-color: blue;
+}
+
+.btn {
+  font-size: 0.8em;
+  font-weight: 300;
+  letter-spacing: 3px;
+  padding: 10px 30px;
+  background-color: black;
+  font-family: 'Lato', sans-serif;
+  border-color: white;
+  text-transform: uppercase;
+  border-radius: 0px;
+  transition: all 0.3s;
+  &:hover, &:active, &:focus, &:active:focus {
+    background-color: white;
+    color: black;
+    border-color: white;
+  }
+}
+
+.ingredients {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+//     background-color: black;
+//     color: white;
+// }
+// application.sel…ss?body=1:3838
+// .form-control:focus {
+//     border-color: blue;
