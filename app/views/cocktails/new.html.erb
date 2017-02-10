@@ -1,4 +1,8 @@
-<p><%= link_to "< Back", cocktails_path %></p>
+<div class="back">
+  <%= link_to cocktails_path do %>
+    <i class="fa fa-arrow-left"></i> BACK
+  <% end %>
+</div>
 <h1>New cocktail</h1>
 <%= simple_form_for @cocktail do |f| %>
   <%= f.input :name %>

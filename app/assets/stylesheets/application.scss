@@ -13,7 +13,7 @@
 @import "components/index";
 @import "pages/index";
 @import "vendor/index";
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400|Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400|Permanent+Marker|Nova+Mono');
 
 $metalic_blue: #4000FF;
 
@@ -21,7 +21,7 @@ body {
   margin-top: 30px;
   background-color: black;
   color: white;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Nova Mono', monospace;
   margin-bottom: 50px;
   font-weight: 300;
   min-height: 100vh;
@@ -34,7 +34,6 @@ body {
 }
 
 .back {
-  color: #6a38ff;
   a {
     color: white;
     font-size: 0.8em;
@@ -43,10 +42,17 @@ body {
     text-transform: uppercase;
     padding-left: 10px;
     &:hover {
-      color: #6a38ff;;
+      color: #6a38ff;
       text-decoration: none;
     }
+    i {
+      color: #6a38ff;
+    }
   }
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 h1 {
@@ -78,10 +84,15 @@ h2, h3, h4 {
   background-size: 80px;
   transition: all 0.3s ease;
   color: white;
+  font-family: 'Lato', sans-serif;
   &:hover {
     background-color: $metalic_blue;
     background-image: none;
     background-position: -100px 0px;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
   }
 }
 
@@ -116,4 +127,11 @@ h2, h3, h4 {
 .ingredients {
   margin-top: 40px;
   margin-bottom: 40px;
+  a {
+    color: #6a38ff;
+  }
+  i:hover, a:hover {
+    color: white;
+    text-decoration: none;
+  }
 }
