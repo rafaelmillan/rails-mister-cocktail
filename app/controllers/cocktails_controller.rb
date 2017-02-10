@@ -2,7 +2,7 @@ class CocktailsController < ApplicationController
   before_action :set_cocktail, only: [ :show, :upvote ]
 
   def index
-    @cocktails = Cocktail.all
+    @cocktails = Cocktail.order(votes: :desc)
   end
 
   def show
