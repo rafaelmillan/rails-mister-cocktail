@@ -15,6 +15,8 @@
 @import "vendor/index";
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400|Permanent+Marker');
 
+$metalic_blue: #4000FF;
+
 body {
   margin-top: 30px;
   background-color: black;
@@ -22,6 +24,29 @@ body {
   font-family: 'Lato', sans-serif;
   margin-bottom: 50px;
   font-weight: 300;
+  min-height: 100vh;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0c114f+0,000000+100 */
+  background: #100041; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  #0c114f 0%, #000000 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  #0c114f 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  #0c114f 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c114f', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.back {
+  color: #6a38ff;
+  a {
+    color: white;
+    font-size: 0.8em;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding-left: 10px;
+    &:hover {
+      color: #6a38ff;;
+      text-decoration: none;
+    }
+  }
 }
 
 h1 {
@@ -42,29 +67,31 @@ h2, h3, h4 {
 }
 
 .recipe {
-  border: blue dashed;
+  border: $metalic_blue solid;
   border-width: 0px 0px 1px 0px;
-  padding: 20px 0;
+  padding: 20px 0px 20px 80px;
   text-transform: uppercase;
   font-weight: 300;
   letter-spacing: 5px;
+  background-repeat: no-repeat;
+  background-position: 50px 0px;
+  background-size: 80px;
   transition: all 0.3s ease;
+  color: white;
   &:hover {
-    background-color: blue;
+    background-color: $metalic_blue;
+    background-image: none;
+    background-position: -100px 0px;
   }
 }
 
-.recipe a {
-  color: white;
-}
-
 .form-control {
-  background-color: black;
+  background-color: transparent;
   color: white;
 }
 
 .form-control:focus {
-  border-color: blue;
+  border-color: $metalic_blue;
 }
 
 .btn {
@@ -72,16 +99,17 @@ h2, h3, h4 {
   font-weight: 300;
   letter-spacing: 3px;
   padding: 10px 30px;
-  background-color: black;
+  background-color: transparent;
   font-family: 'Lato', sans-serif;
-  border-color: white;
+  border-color: $metalic_blue;
+  border-width: 0 0 3px 0;
   text-transform: uppercase;
   border-radius: 0px;
   transition: all 0.3s;
   &:hover, &:active, &:focus, &:active:focus {
-    background-color: white;
-    color: black;
-    border-color: white;
+    background-color: $metalic_blue;
+    color: white;
+    border-color: $metalic_blue;
   }
 }
 
@@ -89,10 +117,3 @@ h2, h3, h4 {
   margin-top: 40px;
   margin-bottom: 40px;
 }
-
-//     background-color: black;
-//     color: white;
-// }
-// application.sel…ss?body=1:3838
-// .form-control:focus {
-//     border-color: blue;

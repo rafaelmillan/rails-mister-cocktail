@@ -1,9 +1,11 @@
-<h1>Galaxy Cocktails</h1>
+<h1 class="text-center">Galaxy Cocktails</h1>
 <div id="recipes-wrapper">
   <% @cocktails.each do |cocktail| %>
-    <div class="recipe text-center"><%= link_to cocktail.name, cocktail_path(cocktail) %></div>
+    <%= link_to cocktail_path(cocktail) do %>
+    <div class="recipe text-center" style="background-image: url('<%= cl_image_path cocktail.photo.url, height: 300, width: 400, crop: :fill %>')"><%= cocktail.name %></div>
+    <% end %>
   <% end %>
 </div>
 <%= link_to new_cocktail_path, class: "btn btn-primary space-button pull-right" do %>
-  New cocktail <i class="fa fa-glass"></i>
+  New <i class="fa fa-glass"></i>
 <% end %>

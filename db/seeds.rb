@@ -22,5 +22,6 @@ end
     )
     dose.save!
   end
+  cocktail.photo = Rails.root.join("db/seed_images/Group #{(1..20).to_a.sample}.png").open
   cocktail.save!
 end
